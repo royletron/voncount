@@ -19,7 +19,7 @@
   "dependencies": {
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1",
+    "@oclif/plugin-plugins": "^2.1.0",
     "console-table-printer": "2.10.0",
     "filehound": "1.17.5",
     "minimatch": "3.0.5"
