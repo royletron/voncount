@@ -2,10 +2,14 @@
 
 I vant to count your lines
 
+![Count VonCount](logo.svg "Count VonCount")
+
 <!-- toc -->
 
+- [VonCount](#voncount)
 - [Usage](#usage)
 - [Commands](#commands)
+- [Config](#config)
 <!-- tocstop -->
 
 # Usage
@@ -17,7 +21,7 @@ $ npm install -g voncount
 $ voncount COMMAND
 running command...
 $ voncount (--version)
-voncount/0.0.0 darwin-x64 node-v14.15.4
+voncount/0.0.1 darwin-x64 node-v14.15.4
 $ voncount --help [COMMAND]
 USAGE
   $ voncount COMMAND
@@ -30,26 +34,50 @@ USAGE
 
 <!-- commands -->
 
+- [`voncount help [COMMAND]`](#voncount-help-command)
 - [`voncount run PATH`](#voncount-run-path)
 
-## `voncount run PATH`
+## `voncount help [COMMAND]`
 
-Get counting lines!
+Display help for voncount.
 
 ```
 USAGE
-  $ voncount run [path] -f <value>
+  $ voncount help [COMMAND] [-n]
 
 ARGUMENTS
-  PERSON  Person to say hello to
+  COMMAND  Command to show help for.
 
 FLAGS
-  -c, --config=<value>  Optional config file
+  -n, --nested-commands  Include all nested commands in the output.
+
+DESCRIPTION
+  Display help for voncount.
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.11/src/commands/help.ts)_
+
+## `voncount run PATH`
+
+run a count of a codebase
+
+```
+USAGE
+  $ voncount run [PATH] [-c <value>]
+
+ARGUMENTS
+  PATH  location of codebase
+
+FLAGS
+  -c, --config=<value>
 
 DESCRIPTION
   run a count of a codebase
-
 ```
+
+_See code: [dist/commands/run/index.ts](https://github.com/royletron/voncount/blob/v0.0.1/dist/commands/run/index.ts)_
+
+<!-- commandsstop -->
 
 # Config
 
@@ -128,11 +156,11 @@ You would want to match everything between `/**` and ` */`:
       "name": "documentation",
       "between": {
         "start": "^\\/\\*\\*",
-        "end": "^ \\*\/$"
+        "end": "^ \\*/$"
       }
     }
   ]
 }
+```
 
 _Be careful to correctly escape your regexs_
-```
