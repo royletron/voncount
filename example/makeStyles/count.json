@@ -1,0 +1,20 @@
+{
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "nexus-typegen.ts",
+    "truenorth-graphql.ts",
+    "nexus-prisma-typegen.ts",
+    "**/node_modules/*"
+  ],
+  "countBlanklines": false,
+  "groups": [
+    {
+      "name": "makeStyle",
+      "between": {
+        "start": "makeStyles\\(\\(",
+        "end": "\\);$"
+      }
+    }
+  ]
+}
