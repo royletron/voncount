@@ -20,7 +20,7 @@
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
-    "console-table-printer": "2.10.0",
+    "console-table-printer": "2.11.0",
     "filehound": "1.17.5",
     "minimatch": "3.0.5"
   },
